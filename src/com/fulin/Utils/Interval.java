@@ -1,4 +1,4 @@
-package com.fulin.utils;
+package com.fulin.Utils;
 
 /**
  * Created by fulin on 16-12-11.

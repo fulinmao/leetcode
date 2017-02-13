@@ -1,4 +1,4 @@
-package com.fulin.dp;
+package com.fulin.DP;
 
 public class LongestIncreasingSubsequence {
 
@@ -9,7 +9,7 @@ public class LongestIncreasingSubsequence {
 		System.out.println(result);
 	}
 	/**
-	 * dp 
+	 * DP
 	 * @param nums
 	 * @return
 	 */
@@ -20,17 +20,17 @@ public class LongestIncreasingSubsequence {
 //		}
 //		int maxLength = 1;
 //		int length = nums.length;
-//		int[] dp = new int[length];
-//		dp[0] = 1;
+//		int[] DP = new int[length];
+//		DP[0] = 1;
 //		for (int i = 1; i < length; i++) {
 //
 //			for (int j = 0; j < i; j++) {
 //				if (nums[j] < nums[i]) {
-//					dp[i] = max(dp[j], dp[i]);
+//					DP[i] = max(DP[j], DP[i]);
 //				}
 //			}
-//			dp[i] = dp[i] + 1;
-//			maxLength = max(maxLength, dp[i]);
+//			DP[i] = DP[i] + 1;
+//			maxLength = max(maxLength, DP[i]);
 //		}
 //		return maxLength;
 //

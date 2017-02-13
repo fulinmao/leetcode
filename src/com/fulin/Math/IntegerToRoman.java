@@ -1,4 +1,4 @@
-package com.fulin.math;
+package com.fulin.Math;
 
 /**
  * Created by fulin on 17-1-15.

@@ -1,6 +1,6 @@
 package com.fulin.Array;
 
-import com.fulin.utils.Interval;
+import com.fulin.Utils.Interval;
 
 import java.util.*;
 
