@@ -14,3 +14,6 @@ hs_err_pid*
 .idea/*
 leetcode.iml
 bin/*
+将删除 .idea/
+将删除 bin/
+将删除 classes/
