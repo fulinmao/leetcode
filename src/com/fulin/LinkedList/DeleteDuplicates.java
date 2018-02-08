@@ -1,5 +1,7 @@
 package com.fulin.LinkedList;
 
+import com.fulin.Utils.ListNode;
+
 public class DeleteDuplicates {
 
 	public static void main(String[] args) {
@@ -34,17 +36,4 @@ public class DeleteDuplicates {
         return head;
     }
 
-}
-
-/**
- * Definition for singly-linked list.
- * 
- */
-class ListNode {
-	int val;
-	ListNode next;
-
-	ListNode(int x) {
-		val = x;
-	}
 }
