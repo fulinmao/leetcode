@@ -1,5 +1,7 @@
 package com.fulin.LinkedList;
 
+import com.fulin.Utils.ListNode;
+
 /**
  * Created by fulin on 16-11-27.
  */

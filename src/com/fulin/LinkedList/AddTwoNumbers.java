@@ -1,6 +1,8 @@
 package com.fulin.LinkedList;
 
 
+import com.fulin.Utils.ListNode;
+
 public class AddTwoNumbers {
 
 	

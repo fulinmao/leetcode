@@ -1,5 +1,7 @@
 package com.fulin.LinkedList;
 
+import com.fulin.Utils.ListNode;
+
 import java.util.Arrays;
 
 /**
