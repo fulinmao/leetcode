@@ -92,8 +92,12 @@ public class WordLadder {
         if (wordList == null || wordList.size() == 0 || beginWord.length() != endWord.length()) {
             return result;
         }
+        // 将List 更换为set 加快执行速度
+        Set<String> wordSet = new HashSet<>(wordList);
+
+
         // 如果endWord不在wordList 中 ，直接返回0
-        if (!wordList.contains(endWord)) {
+        if (!wordSet.contains(endWord)) {
             return result;
         }
         LinkedList<String> wordQueue = new LinkedList<>();
@@ -106,24 +110,25 @@ public class WordLadder {
         while (!wordQueue.isEmpty()) {
             String word = wordQueue.poll();
             currentNum--;
-            List<String> resultList = new ArrayList<>();
-            for (int i = 0; i < wordList.size(); i++) {
-                String temp = wordList.get(i);
-                int distance = wordDistance(word, temp);
-                if (distance == 1) {
-                    resultList.add(temp);
-                }
-            }
+            List<String> resultList = getNei(word,wordSet);
+//            for (int i = 0; i < wordList.size(); i++) {
+//                String temp = wordList.get(i);
+//                int distance = wordDistance(word, temp);
+//                if (distance == 1) {
+//                    resultList.add(temp);
+//                }
+//            }
 
-            for (int i = 0; i < resultList.size(); i++) {
-                String temp = resultList.get(i);
+//            for(int i=0;i<resultList.size();i++)
+            // 该方式会加快执行速度
+            for (String temp : resultList) {
                 if (endWord.equals(temp)) {
                     result++;
                     return result;
                 }
-                if (wordList.contains(temp)) {
+                if (wordSet.contains(temp)) {
                     wordQueue.add(temp);
-                    wordList.remove(wordList.indexOf(temp));
+                    wordSet.remove(temp);
                     nextNum++;
                 }
             }
@@ -193,7 +198,7 @@ public class WordLadder {
         return 0;
     }
 
-    private List<String> getNei(String str, Set<String> set) {
+    private static List<String> getNei(String str, Set<String> set) {
         List<String> ret = new ArrayList<>();
         char[] ch = str.toCharArray();
         for (int i = 0; i < ch.length; i++) {
