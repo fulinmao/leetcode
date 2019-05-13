@@ -28,7 +28,7 @@ public class WordLadderTest {
         int result = WordLadder.ladderLength(beginWord, endWord, wordList);
         System.out.println(new Date().getTime() - start);
         System.out.println(result);
-        assert result == 5;
+        assert result == 20;
 
     }
 }
