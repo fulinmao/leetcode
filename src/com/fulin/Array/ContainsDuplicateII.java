@@ -3,6 +3,7 @@ package com.fulin.Array;
 import java.util.HashMap;
 
 /**
+ * 两个相同的元素 索引的差值小于K
  * Created by fulin on 16-12-9.
  */
 public class ContainsDuplicateII {
