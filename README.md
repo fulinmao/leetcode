@@ -1,5 +1,23 @@
 # leetcode
 
+
+## [121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)（2019-07-12）
+### 题目
+    Say you have an array for which the ith element is the price of a given stock on day i.
+    If you were only permitted to complete at most one transaction 
+    (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit.
+    Note that you cannot sell a stock before you buy one.
+### 测试案例
+#### Example 1:
+    Input: [7,1,5,3,6,4]
+    Output: 5
+#### Example 2:
+    Input: [7,6,4,3,1]
+    Output: 0    
+### 解题思路
+    1.只有一次买和卖的机会，且买要再卖之前完成
+    2.找到数值最小的时刻买入，找到再其后最高值卖出
+
 ## [217. Contains Duplicate ](https://leetcode.com/problems/contains-duplicate/)(2019-07-04)
 ### 题目：
     Given an array of integers, find if the array contains any duplicates.
