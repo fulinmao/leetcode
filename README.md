@@ -1,6 +1,30 @@
 # leetcode
 
+## [53.Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
+### 题目
+    Given an integer array nums, find the contiguous subarray 
+    (containing at least one number) which has the largest sum and return its sum.
+### 测试案例
+    Given an integer array nums, find the contiguous subarray 
+    (containing at least one number) which has the largest sum and return its sum.
+#### Example 1
+    Input: [-2,1,-3,4,-1,2,1,-5,4],
+    Output: 6
+### 解题思路
+#### 思路1
+    使用蛮力查找的方式求解最大子序列和，时间复杂度O(n2)
+    （1）.从第一个元素开始循环，循环所有以第一个元素开头的子序列，并计算其和的最大值
+    （2）.找到每一个元素的开头的子序列和的最大值，找到最终的最大值
+#### 思路2 
+    使用动态规划的方式求解最大子序列和,时间复杂度为O(n)
+    （1）.使用一个数组（dp）记录以数组元素结尾的最大连续子序列和
+    （2）.将上述的初始值赋值为nums的元素值，使用Max(dp[i-1]+nums[i],nums[i])更新该值
+    （3）.循环dp数组，找到最大值，并返回
+#### 思路3
+    改进动态规划的方法，去掉记录的数组dp,使用sum记录前一个元素的和,并实时计算最大值
+    有一个地方需要特别注意：如果sum的值已经小于0，则需要更新sum值为当前数组的元素值
 
+    
 ## [121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)（2019-07-12）
 ### 题目
     Say you have an array for which the ith element is the price of a given stock on day i.
